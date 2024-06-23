@@ -28,7 +28,6 @@ app.get("/", async (c) => {
     const fetch = async (inp: string) =>
       await c.env.AI.run("@cf/qwen/qwen1.5-14b-chat-awq", {
         prompt: `You are responsible for summarizing transcript content to markdown. Given the transcript of a video, produce a readable, clean markdown with headings and subheadings based on the transcript content. 
-      Do not include any links.
 Input: ${inp}
 Output:\`\`\`markdown\n`,
       });
